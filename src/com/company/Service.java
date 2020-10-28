@@ -22,7 +22,9 @@ public class Service extends Thread {
             while(this.started) {
                 int bytesReceived = toReceive.read(message);
                 String messageString = new String(this.message, 0, bytesReceived);
-                System.out.println(this.client.getInetAddress().getHostName() + ": " + messageString);
+                System.out.println(this.client.getInetAddress().getHostName() + " - "
+                                    + this.client.getInetAddress().getHostAddress() + " on Port " +
+                                    + this.client.getPort() + " - " + messageString + " (" + bytesReceived + " bytes)");
                 if(messageString.contains("closeConnection")) {
                     this.started = false;
                     System.out.println("Disconnecting " + this.client.getInetAddress().getHostName());

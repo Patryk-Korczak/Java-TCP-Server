@@ -59,9 +59,9 @@ public class Server extends Thread{
 
     public void help() {
         System.out.println("Available commands: ");
-        System.out.println("-stop | Disconnect all connected clients and close the server ");
-        System.out.println("-info | Display information about server ");
-        System.out.println("-clients | Display information about all connected users ");
+        System.out.println("-stop       | Disconnect all connected clients and close the server ");
+        System.out.println("-info       | Display information about server ");
+        System.out.println("-clients    | Display information about all connected users ");
     }
 
 
